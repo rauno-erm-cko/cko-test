@@ -1,5 +1,4 @@
 import React from "react";
-
 import FeedbackInputs from "./FeedbackInputs";
 import SmallBox from "../styling-components/SmallBox";
 import BigBox from "../styling-components/BigBox";
@@ -19,7 +18,6 @@ const useStyles = makeStyles({
         textAlign: "center",
         margin: "1em 0px",
     }
-
 })
 
 function FeedbackForm({addNewFeedback, submitHandler}) {
@@ -35,7 +33,7 @@ function FeedbackForm({addNewFeedback, submitHandler}) {
                     </p>
                 </header>
             </SmallBox>
-            <BigBox >
+            <BigBox>
                 <FeedbackInputs addNewFeedback={addNewFeedback} submitHandler={submitHandler}/>
             </BigBox>
         </div>

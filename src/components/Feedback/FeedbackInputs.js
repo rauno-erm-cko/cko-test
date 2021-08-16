@@ -54,7 +54,7 @@ function FeedbackInputs({addNewFeedback, submitHandler}) {
             id: 0,
             fullName: "",
             email: "",
-            rating: 5,
+            rating: 3,
             comment: "",
         },
         validationSchema: validationSchema,

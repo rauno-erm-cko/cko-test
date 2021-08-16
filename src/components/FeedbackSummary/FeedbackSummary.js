@@ -3,14 +3,13 @@ import Comment from "./Comment";
 import Chart from "./Chart";
 import SmallBox from "../styling-components/SmallBox";
 import BigBox from "../styling-components/BigBox";
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import {makeStyles} from "@material-ui/styles";
 
 
 const useStyles = makeStyles({
     icon: {
         fontSize: 50,
-        textAlign:"center"
+        textAlign: "center"
     },
     header: {
         fontWeight: "300",
@@ -21,35 +20,29 @@ const useStyles = makeStyles({
         alignItems: "center",
         textAlign: "center",
     }
-
 });
 
-function FeedbackSummary({ userFeedback }) {
-    // const [expanded, setExpanded] = useState(false)
+function FeedbackSummary({userFeedback, submitted}) {
     const classes = useStyles()
 
-
-
-  return (
-    <div style={{margin: "1em"}} >
-            <SmallBox style={{marginBottom: "1em", backgroundColor: "rgba(0,24,90,0.8)"}}>
+    return (
+        <div style={{margin: "1em"}}>
+            {submitted && <SmallBox style={{marginBottom: "1em", backgroundColor: "rgba(0,24,90,0.8)"}}>
                 <p className={classes.header} style={{fontSize: "2em"}}>Thank You for feedback!</p>
-            </SmallBox>
+            </SmallBox>}
+
 
             <SmallBox>
-            <Chart userFeedback={userFeedback} />
+                <Chart userFeedback={userFeedback}/>
             </SmallBox>
 
-            <BigBox >
-            {userFeedback.map((fb) => (
-              <Comment {...fb} key={Math.random()} />
-            ))}
-                <div style={{display: "flex", alignItems:"center", justifyContent:"center"}}>
-                    {(userFeedback.length > 3) ? <ArrowDropDownIcon className={classes.icon} /> : ""}
-                </div>
+            <BigBox>
+                {userFeedback.map((fb) => (
+                    <Comment {...fb} key={Math.random()}/>
+                ))}
             </BigBox>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default FeedbackSummary;
