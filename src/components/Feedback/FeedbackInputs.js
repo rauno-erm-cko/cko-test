@@ -10,8 +10,7 @@ import {Rating} from "@material-ui/lab";
 
 const useStyles = makeStyles({
     button: {
-        background:
-            "linear-gradient(90deg, rgba(6,0,102,1) 0%, rgba(0,0,75,1) 100%, rgba(0,113,136,1) 100%)",
+        background: "rgb(30,42,100)",
         border: 0,
         borderRadius: 15,
         color: "white",
