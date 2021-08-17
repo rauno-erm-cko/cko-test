@@ -95,6 +95,7 @@ function FeedbackInputs({addNewFeedback, submitHandler}) {
                     {/* Full name */}
                     <Grid item sm={8} xs={10}>
                         <FeedbackInput
+                            inputProps={{ "data-testid": "feedback-full-name" }}
                             type="text"
                             name="fullName"
                             label="Full name"
@@ -108,6 +109,7 @@ function FeedbackInputs({addNewFeedback, submitHandler}) {
                     {/* Email */}
                     <Grid item sm={8} xs={10}>
                         <FeedbackInput
+                            inputProps={{ "data-testid": "feedback-email" }}
                             name="email"
                             type="email"
                             label="Email"
@@ -121,6 +123,7 @@ function FeedbackInputs({addNewFeedback, submitHandler}) {
                     {/* Comment */}
                     <Grid item sm={8} xs={10}>
                         <TextField
+                            inputProps={{ "data-testid": "feedback-comment" }}
                             multiline
                             fullWidth
                             rows={4}
@@ -137,11 +140,13 @@ function FeedbackInputs({addNewFeedback, submitHandler}) {
                     {/* Submit button */}
                     <Grid item sm={12}>
                         <Button
+                            disabled={!formik.values.fullName || !formik.values.email }
                             className={classes.button}
                             size="large"
                             variant="contained"
                             color="primary"
                             type="submit"
+                            data-testid="feedback-submit"
                         >
                             Send Feedback
                         </Button>

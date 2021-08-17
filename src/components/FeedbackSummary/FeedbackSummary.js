@@ -25,19 +25,23 @@ const useStyles = makeStyles({
 function FeedbackSummary({userFeedback, submitted}) {
     const classes = useStyles()
 
+    let showLessFeedback = userFeedback.slice(0, 3).map((item) => {
+        return <Comment key={Math.random()} {...item}  />
+    });
+
+
     return (
         <div style={{margin: "1em"}}>
             {submitted && <SmallBox style={{marginBottom: "1em", backgroundColor: "rgba(0,24,90,0.8)"}}>
                 <p className={classes.header} style={{fontSize: "2em"}}>Thank You for feedback!</p>
             </SmallBox>}
 
-
             <SmallBox>
                 <Chart userFeedback={userFeedback}/>
             </SmallBox>
-
             <BigBox>
-                {userFeedback.map((fb) => (
+                {!submitted && showLessFeedback}
+                {submitted && userFeedback.map((fb) => (
                     <Comment {...fb} key={Math.random()}/>
                 ))}
             </BigBox>
