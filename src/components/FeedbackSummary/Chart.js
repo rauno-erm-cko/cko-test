@@ -19,7 +19,7 @@ function Chart({userFeedback}) {
 
     return (
             <Grid container spacing={1}>
-                <Grid container item sm={4} xs={3} alignItems="center">
+                <Grid container item sm={5} xs={4} alignItems="center" justifyContent="center">
                     <p>Rating scores</p>
                 </Grid>
                 <Grid item xs={6} sm={6}>
