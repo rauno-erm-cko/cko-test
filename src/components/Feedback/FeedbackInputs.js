@@ -25,11 +25,11 @@ const useStyles = makeStyles({
 });
 
 const labels = {
-    1: 'Useless',
-    2: 'Poor',
-    3: 'Ok',
-    4: 'Good',
-    5: 'Excellent',
+    1: "Useless",
+    2: "Poor",
+    3: "Ok",
+    4: "Good",
+    5: "Excellent",
 };
 
 const validationSchema = yup.object({
@@ -43,17 +43,17 @@ const validationSchema = yup.object({
 });
 
 function FeedbackInputs({addNewFeedback, submitHandler}) {
-    const [value, setValue] = useState(3);
+    const [value, setValue] = useState(5);
     const [hover, setHover] = useState(-1);
     const classes = useStyles();
 
 
     const formik = useFormik({
         initialValues: {
-            id: 0,
+            id: Math.random(),
             fullName: "",
             email: "",
-            rating: 3,
+            rating: 5,
             comment: "",
         },
         validationSchema: validationSchema,
@@ -80,7 +80,7 @@ function FeedbackInputs({addNewFeedback, submitHandler}) {
                         <Typography gutterBottom>Rate us!</Typography>
                         <Rating
                             value={value}
-                            defaultValue={3}
+                            defaultValue={5}
                             name="size-large"
                             size="large"
                             onChange={handleRating}

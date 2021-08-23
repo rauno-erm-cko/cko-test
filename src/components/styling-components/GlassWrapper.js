@@ -9,7 +9,7 @@ const useStyles = makeStyles({
         borderRadius: 30,
         borderLeft: "solid 2px rgba(172,227,214,0.3)",
         borderTop: "solid 1px rgba(254,118,65,0.8)",
-        width: "95%",
+        width: "97%",
         height: "auto",
         justifyContent:"center",
         padding: "1em",

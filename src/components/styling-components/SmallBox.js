@@ -4,9 +4,9 @@ import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles({
     root: {
-        width: "100%",
-        maxWidth: "580px",
-        height: "215px",
+        maxWidth:"36.25em",
+        minWidth:"18em",
+        height: "13.5em",
         boxShadow: "7px 8px 5px rgba(0, 0, 0, 0.25)",
         borderRadius: "30px",
         border: " 1px solid rgba(255, 255, 255, 0.5)",

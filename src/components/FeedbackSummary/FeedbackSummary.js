@@ -32,7 +32,7 @@ function FeedbackSummary({userFeedback, submitted}) {
 
     return (
         <div style={{margin: "1em"}}>
-            {submitted && <SmallBox style={{marginBottom: "1em", backgroundColor: "rgba(0,24,90,0.8)"}}>
+            {submitted && <SmallBox style={{backgroundColor: "rgba(0,24,90,0.8)"}}>
                 <p className={classes.header} style={{fontSize: "2em"}}>Thank You for feedback!</p>
             </SmallBox>}
 
@@ -42,7 +42,7 @@ function FeedbackSummary({userFeedback, submitted}) {
             <BigBox>
                 {!submitted && showLessFeedback}
                 {submitted && userFeedback.map((fb) => (
-                    <Comment {...fb} key={Math.random()}/>
+                    <Comment {...fb} key={fb.id}/>
                 ))}
             </BigBox>
         </div>

@@ -27,18 +27,18 @@ const useStyles = makeStyles({
     },
     comment: {
         backgroundColor: "rgba(29,41,99,0.7)",
-        borderRadius: "15px",
+        borderRadius: "1em",
         padding: "1em",
         wordWrap: "break-word",
         color: "white",
     },
     commentBox: {
         backgroundColor: "rgba(255,255,255,0.3)",
-        borderRadius: "15px",
+        borderRadius: "1em",
         alignItems: "center",
         boxShadow: "2px 5px rgba(0, 0, 0, 0.1)",
         padding: "0.5em",
-        margin: "0.5em"
+        margin: "0.5em",
     }
 })
 
@@ -57,7 +57,7 @@ function Comment(props) {
                 id={props.id}
                 className={classes.commentBox}
             >
-                <Grid container alignItems="center" spacing={5} justifyContent={"space-around"}>
+                <Grid container alignItems="center" spacing={5} justifyContent="space-around">
                     <Grid item xs={5} s={5}>
                         <div className={classes.name}>
                             <div className={classes.avatar}>
